@@ -30,6 +30,7 @@ export default function FounderTeaser() {
               src="/founder.jpg"
               alt="Surbhi Singh — Founder of Forever Fuzed"
               fill
+              sizes="(max-width: 768px) 90vw, 400px"
               className="object-cover object-top"
             />
             {/* Subtle gold overlay at bottom */}
