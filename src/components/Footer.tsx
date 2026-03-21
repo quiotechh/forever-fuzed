@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Facebook, Youtube, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Youtube, Mail, Phone, Clock, MapPin } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -40,6 +40,8 @@ export default function Footer() {
             src="/logo/logo-2.png"
             alt="Forever Fuzed"
             fill
+            sizes="160px"
+            loading="eager"
             className="object-contain scale-3d scale-200 brightness-110"
           />
         </div>
@@ -55,7 +57,7 @@ export default function Footer() {
       </div>
 
       {/* Main grid */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
         {/* Quick Links */}
         <div>
@@ -108,24 +110,10 @@ export default function Footer() {
                   Canada
                 </span>
                 <a
-                  href="tel:+16471234567"
+                  href="tel:+16479019915"
                   className="font-lato text-sm text-white/55 hover:text-[#F2A7B0] transition-colors"
                 >
-                  +1 (647) 123-4567
-                </a>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Phone className="w-3.5 h-3.5 text-[#C9A96E] mt-0.5 shrink-0" />
-              <div className="flex flex-col gap-0.5">
-                <span className="font-lato text-[9px] tracking-[0.15em] uppercase text-white/35">
-                  India
-                </span>
-                <a
-                  href="tel:+919876543210"
-                  className="font-lato text-sm text-white/55 hover:text-[#F2A7B0] transition-colors"
-                >
-                  +91 98765 43210
+                  +1 647 901 9915
                 </a>
               </div>
             </li>
@@ -137,6 +125,24 @@ export default function Footer() {
               >
                 hello@foreverfuzed.com
               </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <Clock className="w-3.5 h-3.5 text-[#C9A96E] mt-0.5 shrink-0" />
+              <div className="flex flex-col gap-0.5">
+                <span className="font-lato text-[9px] tracking-[0.15em] uppercase text-white/35">
+                  Hours
+                </span>
+                <span className="font-lato text-sm text-white/55">
+                  11:00 AM – 8:00 PM
+                </span>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="w-3.5 h-3.5 text-[#C9A96E] mt-0.5 shrink-0" />
+              <span className="font-lato text-sm text-white/55 leading-relaxed">
+                Suite-56, 6733 Mississauga Road,<br />
+                Mississauga, Ontario, L5N 6J5
+              </span>
             </li>
           </ul>
         </div>
@@ -161,8 +167,8 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Enquiry CTA */}
-          <Link href="/contact">
+          {/* Enquiry CTA — desktop only here */}
+          <Link href="/contact" className="hidden lg:block">
             <button className="relative overflow-hidden group font-lato text-[9.5px] tracking-[0.25em] uppercase px-6 py-3 border border-[#C9A96E]/60 text-[#C9A96E] transition-all duration-300 w-full">
               <span className="absolute inset-0 bg-[#C9A96E] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
               <span className="relative group-hover:text-white transition-colors duration-300">
@@ -171,6 +177,18 @@ export default function Footer() {
             </button>
           </Link>
         </div>
+      </div>
+
+      {/* Enquiry CTA — mobile full width */}
+      <div className="lg:hidden px-6 pb-10">
+        <Link href="/contact">
+          <button className="relative overflow-hidden group font-lato text-[9.5px] tracking-[0.25em] uppercase px-6 py-4 border border-[#C9A96E]/60 text-[#C9A96E] transition-all duration-300 w-full">
+            <span className="absolute inset-0 bg-[#C9A96E] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
+            <span className="relative group-hover:text-white transition-colors duration-300">
+              Book a Consultation
+            </span>
+          </button>
+        </Link>
       </div>
 
       {/* Bottom bar */}

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ChevronDown } from "lucide-react";
 
 const services = [
@@ -98,6 +98,7 @@ export default function Navbar() {
                 src="/logo/logo-2.png"
                 alt="Forever Fuzed"
                 fill
+                sizes="128px"
                 className="object-contain transition-transform scale-125 duration-300 group-hover:scale-105"
                 priority
               />
@@ -186,6 +187,7 @@ export default function Navbar() {
               side="right"
               className="w-75 bg-[#faf9f7] border-l border-[#e8ddd5] p-0 overflow-y-auto"
             >
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               {/* Mobile logo */}
               <div className="flex items-center px-7 py-5 border-b border-[#ede6df]">
                 <div className="relative w-32 h-12">
@@ -193,6 +195,7 @@ export default function Navbar() {
                     src="/logo/logo-2.png"
                     alt="Forever Fuzed"
                     fill
+                    sizes="128px"
                     className="object-contain object-left"
                   />
                 </div>

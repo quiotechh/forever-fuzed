@@ -1,27 +1,33 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-// Glitter particle config
-const PARTICLES = Array.from({ length: 40 }, (_, i) => ({
-  id: i,
-  x: Math.random() * 100,
-  y: Math.random() * 100,
-  size: Math.random() * 3 + 1,
-  duration: Math.random() * 4 + 3,
-  delay: Math.random() * 5,
-  color: ["#C9A96E", "#F2A7B0", "#9CA195", "#ffffff"][
-    Math.floor(Math.random() * 4)
-  ],
-  opacity: Math.random() * 0.6 + 0.2,
-}));
+const COLORS = ["#C9A96E", "#F2A7B0", "#9CA195", "#ffffff"];
+
+function generateParticles() {
+  return Array.from({ length: 40 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 3 + 1,
+    duration: Math.random() * 4 + 3,
+    delay: Math.random() * 5,
+    color: COLORS[Math.floor(Math.random() * 4)],
+    opacity: Math.random() * 0.6 + 0.2,
+  }));
+}
 
 export default function CTABanner() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [hovering, setHovering] = useState(false);
+  const [particles, setParticles] = useState<ReturnType<typeof generateParticles>>([]);
+
+  useEffect(() => {
+    setParticles(generateParticles());
+  }, []);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -79,7 +85,7 @@ export default function CTABanner() {
 
       {/* Glitter particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
-        {PARTICLES.map((p) => (
+        {particles.map((p) => (
           <motion.div
             key={p.id}
             className="absolute rounded-full"
