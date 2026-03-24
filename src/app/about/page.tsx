@@ -19,7 +19,7 @@ const fadeUp = {
 // ─────────────────────────────────────────────────────────────────────────────
 function AboutHero() {
   return (
-    <section className="relative h-screen min-h-[680px] flex items-end overflow-hidden">
+    <section className="relative h-screen min-h-170 flex items-end overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <Image
@@ -50,7 +50,6 @@ function AboutHero() {
 
       {/* Hero copy — bottom-left aligned (Ridge Studio style) */}
       <div className="relative z-10 w-full pb-20 md:pb-28 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -74,8 +73,7 @@ function AboutHero() {
         >
           The Vision Behind
           <br />
-          Every{" "}
-          {/* Outlined / stroke word — like Ridge Studio's "Spaces." */}
+          Every {/* Outlined / stroke word — like Ridge Studio's "Spaces." */}
           <span
             className="font-cormorant italic"
             style={{
@@ -107,7 +105,7 @@ function AboutHero() {
 // ─────────────────────────────────────────────────────────────────────────────
 function FounderSection() {
   const bio = [
-    `Surbhi Singh is the visionary behind Forever Fuzed — a luxury event curator with a global perspective and deep cultural roots. With a foundation in Mass Communication and a specialization in Event Management, Surbhi began her journey in India, working with established event companies before independently curating 30+ weddings, engagements, and receptions at her own banquet space. Her early experience shaped her understanding of scale, emotion, and flawless execution.`,
+    `Surbhi Singh is the visionary behind Forever Fuzed — a luxury event curator with a global perspective and deep cultural roots. With a foundation in Mass Communication and a specialization in Event Management, Surbhi began her journey in India, working with established event companies before independently curating 50+ weddings, engagements, and receptions at her own banquet space. Her early experience shaped her understanding of scale, emotion, and flawless execution.`,
     `Driven to refine her craft on a global level, she moved to Canada nearly a decade ago to pursue advanced studies in Event Management. While working with multiple event companies in Canada, she gained international exposure, modern aesthetics, and a deeper understanding of client experience in multicultural settings.`,
     `Her true turning point came with her own grand destination wedding in Jaipur — a multi-crore celebration that she conceptualized and executed from overseas. What should have been a joyful journey turned into a two-year challenge of coordination gaps, trust issues, time zone struggles, and lack of reliable end-to-end services for NRIs.`,
   ];
@@ -116,7 +114,6 @@ function FounderSection() {
     <section className="bg-white py-24 md:py-36 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-start">
-
           {/* ── Image side ─────────────────────────────────────── */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -129,7 +126,7 @@ function FounderSection() {
             <div className="absolute -top-8 -left-8 w-3/4 h-[105%] bg-[#9CA195]/8 -z-10 rounded-3xl" />
 
             {/* Photo — Next.js Image component (photo drops in as /founder.jpg) */}
-            <div className="relative aspect-[3/4] w-full max-w-sm mx-auto lg:mx-0 rounded-[2rem] overflow-hidden bg-[#f0ebe5]">
+            <div className="relative aspect-3/4 w-full max-w-sm mx-auto lg:mx-0 rounded-[2rem] overflow-hidden bg-[#f0ebe5]">
               <Image
                 src="/founder.jpg"
                 alt="Surbhi Singh — Founder, Forever Fuzed"
@@ -149,7 +146,9 @@ function FounderSection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="absolute -bottom-6 -right-2 lg:-right-10 bg-white border border-[#e8ddd5] px-7 py-5 shadow-sm"
             >
-              <p className="font-cormorant text-[#C9A96E] text-4xl font-light">30+</p>
+              <p className="font-cormorant text-[#C9A96E] text-4xl font-light">
+                50+
+              </p>
               <p className="font-lato text-[#6b5f5a] text-[10px] tracking-[0.22em] uppercase mt-1">
                 Weddings Curated
               </p>
@@ -163,7 +162,9 @@ function FounderSection() {
               transition={{ duration: 0.6, delay: 0.65 }}
               className="absolute -top-4 -right-2 lg:-right-10 bg-white border border-[#e8ddd5] px-7 py-5 shadow-sm"
             >
-              <p className="font-cormorant text-[#9CA195] text-4xl font-light">10+</p>
+              <p className="font-cormorant text-[#9CA195] text-4xl font-light">
+                10+
+              </p>
               <p className="font-lato text-[#6b5f5a] text-[10px] tracking-[0.22em] uppercase mt-1">
                 Years Experience
               </p>
@@ -172,7 +173,6 @@ function FounderSection() {
 
           {/* ── Text side ──────────────────────────────────────── */}
           <div className="flex flex-col">
-
             {/* Eyebrow */}
             <motion.div
               variants={fadeUp}
@@ -246,7 +246,8 @@ function FounderSection() {
               className="mt-2 mb-10 pl-6 border-l-2 border-[#F2A7B0]"
             >
               <p className="font-cormorant italic text-[#9CA195] text-2xl leading-snug">
-                &ldquo;That experience didn&rsquo;t just inspire me — it defined my purpose.&rdquo;
+                &ldquo;That experience didn&rsquo;t just inspire me — it defined
+                my purpose.&rdquo;
               </p>
               <cite className="font-lato text-[10px] tracking-[0.22em] uppercase text-[#b8a99a] not-italic mt-3 block">
                 — Surbhi Singh
@@ -290,7 +291,6 @@ function VisionSection() {
   return (
     <section className="bg-[#FAF8F5] py-24 md:py-36 px-6">
       <div className="max-w-5xl mx-auto text-center">
-
         {/* Ornamental eyebrow */}
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
@@ -335,9 +335,10 @@ function VisionSection() {
           transition={{ duration: 0.75, delay: 0.18 }}
           className="font-lato text-[#6b5f5a] text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-14"
         >
-          At Forever Fuzed, we specialize in high-end, fully customized destination weddings in India,
-          designed especially for NRIs and globally based couples who want to celebrate their love in
-          their homeland — without the stress, uncertainty, or compromise.
+          At Forever Fuzed, we specialize in high-end, fully customized
+          destination weddings in India, designed especially for NRIs and
+          globally based couples who want to celebrate their love in their
+          homeland — without the stress, uncertainty, or compromise.
         </motion.p>
 
         {/* Vision statement — framed with vertical gradient lines */}
@@ -350,9 +351,9 @@ function VisionSection() {
           className="relative inline-block max-w-3xl"
         >
           <div className="absolute -left-4 md:-left-8 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-[#C9A96E]/60 to-transparent" />
-          <p className="font-cormorant italic text-[#3a2e2a] text-2xl md:text-3xl leading-[1.5] px-4 md:px-10">
-            &ldquo;To create once-in-a-lifetime celebrations that seamlessly fuse
-            love, culture, tradition, and modern luxury.&rdquo;
+          <p className="font-cormorant italic text-[#3a2e2a] text-2xl md:text-3xl leading-normal px-4 md:px-10">
+            &ldquo;To create once-in-a-lifetime celebrations that seamlessly
+            fuse love, culture, tradition, and modern luxury.&rdquo;
           </p>
           <div className="absolute -right-4 md:-right-8 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-[#F2A7B0]/60 to-transparent" />
         </motion.div>
@@ -366,10 +367,12 @@ function VisionSection() {
           transition={{ duration: 0.75, delay: 0.38 }}
           className="font-lato text-[#6b5f5a] text-base leading-relaxed mt-14 max-w-2xl mx-auto"
         >
-          We bridge continents — personally connecting with our clients in Canada and the USA,
-          understanding their story, and transforming it into an unforgettable experience executed
-          flawlessly in destinations like{" "}
-          <span className="text-[#C9A96E] font-medium">Rajasthan, Goa,</span> and beyond.
+          We bridge continents — personally connecting with our clients in
+          Canada and the USA, understanding their story, and transforming it
+          into an unforgettable experience executed flawlessly in destinations
+          like{" "}
+          <span className="text-[#C9A96E] font-medium">Rajasthan, Goa,</span>{" "}
+          and beyond.
         </motion.p>
 
         {/* Destination + origin pills */}
@@ -383,11 +386,8 @@ function VisionSection() {
         >
           {[
             { label: "Canada", accent: sage },
-            { label: "USA", accent: sage },
-            { label: "Rajasthan", accent: gold },
-            { label: "Goa", accent: gold },
-            { label: "Mumbai", accent: rose },
-            { label: "Kerala", accent: rose },
+            { label: "India", accent: gold },
+            { label: "USA", accent: rose },
           ].map(({ label, accent }) => (
             <span
               key={label}
@@ -408,21 +408,32 @@ function VisionSection() {
 // ─────────────────────────────────────────────────────────────────────────────
 const services = [
   { num: "01", name: "Venue Selection & Destination Planning", accent: rose },
-  { num: "02", name: "Save-the-Dates, Invitations & Digital Experiences", accent: gold },
-  { num: "03", name: "Personalized Wedding Songs & Storytelling", accent: sage },
+  {
+    num: "02",
+    name: "Save-the-Dates, Invitations & Digital Experiences",
+    accent: gold,
+  },
+  {
+    num: "03",
+    name: "Personalized Wedding Songs & Storytelling",
+    accent: sage,
+  },
   { num: "04", name: "Pre-Wedding Shoots & Creative Direction", accent: rose },
   { num: "05", name: "Décor Design & Luxury Styling", accent: gold },
   { num: "06", name: "Catering & Hospitality Management", accent: sage },
   { num: "07", name: "Guest Logistics & Travel Coordination", accent: rose },
   { num: "08", name: "Entertainment Curation", accent: gold },
-  { num: "09", name: "Makeup, Styling & Designer Collaborations", accent: sage },
+  {
+    num: "09",
+    name: "Makeup, Styling & Designer Collaborations",
+    accent: sage,
+  },
 ];
 
 function ServicesSection() {
   return (
     <section className="bg-[#1a1f1a] py-24 md:py-36 px-6">
       <div className="max-w-6xl mx-auto">
-
         {/* Header: two-col — headline left, descriptor right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-16 md:mb-24">
           <div>
@@ -463,9 +474,10 @@ function ServicesSection() {
             transition={{ duration: 0.75, delay: 0.2 }}
             className="font-lato text-white/55 text-base leading-relaxed self-end"
           >
-            From the first idea to the final farewell, every detail is thoughtfully crafted to
-            reflect your story, your culture, and your vision — blending traditions, families, and
-            emotions into one seamless celebration.
+            From the first idea to the final farewell, every detail is
+            thoughtfully crafted to reflect your story, your culture, and your
+            vision — blending traditions, families, and emotions into one
+            seamless celebration.
           </motion.p>
         </div>
 
@@ -484,7 +496,7 @@ function ServicesSection() {
               <div className="flex items-center gap-5 md:gap-10">
                 {/* Faded number */}
                 <span
-                  className="font-cormorant text-sm md:text-base tracking-[0.12em] font-light flex-shrink-0 w-7"
+                  className="font-cormorant text-sm md:text-base tracking-[0.12em] font-light shrink-0 w-7"
                   style={{ color: `${svc.accent}50` }}
                 >
                   {svc.num}
@@ -506,7 +518,7 @@ function ServicesSection() {
                 whileInView={{ width: "2rem" }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: 0.15 + i * 0.04 }}
-                className="h-px hidden md:block flex-shrink-0 ml-8"
+                className="h-px hidden md:block shrink-0 ml-8"
                 style={{ backgroundColor: svc.accent }}
               />
             </motion.div>
@@ -563,7 +575,6 @@ function PromiseSection() {
   return (
     <section className="bg-[#FAF8F5] py-24 md:py-36 px-6">
       <div className="max-w-7xl mx-auto">
-
         {/* Section header */}
         <div className="text-center mb-20">
           <motion.div
@@ -593,8 +604,7 @@ function PromiseSection() {
           >
             What You Can
             <br />
-            Always{" "}
-            <span className="italic text-[#9CA195]">Count On</span>
+            Always <span className="italic text-[#9CA195]">Count On</span>
           </motion.h2>
 
           <motion.p
@@ -605,8 +615,9 @@ function PromiseSection() {
             transition={{ duration: 0.75, delay: 0.15 }}
             className="font-lato text-[#6b5f5a] text-base leading-relaxed max-w-xl mx-auto"
           >
-            We understand the emotional and logistical challenges of planning a destination
-            wedding from abroad — because we&rsquo;ve lived it. That&rsquo;s why we bring you:
+            We understand the emotional and logistical challenges of planning a
+            destination wedding from abroad — because we&rsquo;ve lived it.
+            That&rsquo;s why we bring you:
           </motion.p>
         </div>
 
@@ -623,9 +634,13 @@ function PromiseSection() {
               className={[
                 "group p-8 md:p-10 bg-white hover:bg-white transition-colors duration-300 relative",
                 // right border for all except last in each row
-                i < 3 ? "border-b border-[#e8ddd5] lg:border-b-0 lg:border-r" : "border-b border-[#e8ddd5] lg:border-b-0",
+                i < 3
+                  ? "border-b border-[#e8ddd5] lg:border-b-0 lg:border-r"
+                  : "border-b border-[#e8ddd5] lg:border-b-0",
                 // sm: 2-col adjustments
-                i % 2 === 0 ? "sm:border-r sm:border-[#e8ddd5]" : "sm:border-r-0",
+                i % 2 === 0
+                  ? "sm:border-r sm:border-[#e8ddd5]"
+                  : "sm:border-r-0",
                 // override sm border for lg
                 i < 3 ? "lg:border-r lg:border-[#e8ddd5]" : "lg:border-r-0",
               ].join(" ")}
@@ -722,8 +737,8 @@ function AboutCTA() {
           transition={{ duration: 0.75, delay: 0.15 }}
           className="font-lato text-white/55 text-sm leading-relaxed mb-12 tracking-wide"
         >
-          Let&rsquo;s begin your journey together. Share your story with us and we&rsquo;ll
-          craft a celebration that lasts a lifetime.
+          Let&rsquo;s begin your journey together. Share your story with us and
+          we&rsquo;ll craft a celebration that lasts a lifetime.
         </motion.p>
 
         <motion.div

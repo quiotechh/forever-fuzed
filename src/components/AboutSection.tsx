@@ -46,7 +46,7 @@ export default function FounderTeaser() {
             className="absolute -bottom-6 -right-4 lg:-right-10 bg-white border border-[#e8ddd5] px-7 py-5 shadow-sm"
           >
             <p className="font-cormorant text-[#C9A96E] text-4xl font-light">
-              30+
+              50+
             </p>
             <p className="font-lato text-[#6b5f5a] text-[10px] tracking-[0.2em] uppercase mt-1">
               Weddings Curated

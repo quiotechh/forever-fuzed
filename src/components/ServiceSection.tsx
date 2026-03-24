@@ -7,57 +7,53 @@ import Link from "next/link";
 const services = [
   {
     number: "01",
-    title: "Decor & Experience Design",
+    title: "Wedding Styling & Design",
     description:
-      "From mandap to majestic stage — every visual element is conceptualized and executed to tell your story.",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "From concept to execution, every element—color palettes, décor, floral artistry, tablescapes, and ambiance—is thoughtfully curated to create a seamless and luxurious setting. Blending modern elegance with timeless traditions.",
+    image:
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
     accent: "#9CA195",
-    href: "/services#decor",
+    href: "/services#styling",
   },
   {
     number: "02",
-    title: "Photography & Videography",
+    title: "Luxury Gifting & Wedding Hampers",
     description:
-      "Cinematic films and candid photography that capture every stolen glance, every tear, every laugh.",
-    image: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=80",
+      "Bespoke gifting experiences that leave a lasting impression. From curated welcome hampers to elegant wedding favors, each piece is tailored to your theme with premium packaging and personalized details.",
+    image:
+      "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
     accent: "#F2A7B0",
-    href: "/services#photography",
+    href: "/services#gifting",
   },
   {
     number: "03",
-    title: "Guest Logistics & Hospitality",
+    title: "Curated Entertainment Experiences",
     description:
-      "Flights, hotels, transfers, and concierge — your guests experience seamless luxury from arrival to farewell.",
-    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
+      "From live performers and celebrity artists to immersive cultural acts and high-energy productions, we design moments that elevate every event. Each experience is tailored to your audience.",
+    image:
+      "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80",
     accent: "#C9A96E",
-    href: "/services#logistics",
-  },
-  {
-    number: "04",
-    title: "Entertainment Curation",
-    description:
-      "Celebrity artists, live bands, Sangeet direction — we choreograph every moment of joy.",
-    image: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80",
-    accent: "#9CA195",
     href: "/services#entertainment",
   },
   {
-    number: "05",
-    title: "Wardrobe & Styling",
+    number: "04",
+    title: "Seamless Event Logistics & Guest Management",
     description:
-      "Custom bridal outfits, family coordination, and designer collaborations — dressed to perfection.",
-    image: "https://images.unsplash.com/photo-1519657337289-077653f724ed?w=800&q=80",
-    accent: "#F2A7B0",
-    href: "/services#wardrobe",
+      "We manage all logistical elements—from guest coordination and transportation to timelines and on-ground execution—ensuring everything flows effortlessly so you enjoy every moment without concern.",
+    image:
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
+    accent: "#9CA195",
+    href: "/services#logistics",
   },
   {
-    number: "06",
-    title: "Luxury Wedding Hampers",
+    number: "05",
+    title: "Premium Vendor Curation & Management",
     description:
-      "Thoughtfully curated hampers for guests, family, and VIPs — with custom packaging and personalized branding.",
-    image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
-    accent: "#C9A96E",
-    href: "/services#hampers",
+      "A trusted network of top-tier vendors across India and Canada. From venues and décor to catering and production, every partner is carefully selected. We handle sourcing, negotiation, and coordination.",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+    accent: "#F2A7B0",
+    href: "/services#vendors",
   },
 ];
 
@@ -76,10 +72,12 @@ const staggerContainer = {
 };
 
 export default function ServicesOverview() {
+  const firstRow = services.slice(0, 3);
+  const secondRow = services.slice(3, 5);
+
   return (
     <section className="bg-[#FAF8F5] py-24 md:py-36 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-20">
           <motion.div
@@ -110,15 +108,28 @@ export default function ServicesOverview() {
           </motion.h2>
         </div>
 
-        {/* Grid */}
+        {/* Row 1 — 3 cards */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e8ddd5]"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e8ddd5] mb-px"
         >
-          {services.map((service, i) => (
+          {firstRow.map((service, i) => (
+            <ServiceCard key={i} service={service} />
+          ))}
+        </motion.div>
+
+        {/* Row 2 — 2 cards centered */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#e8ddd5] lg:w-2/3 lg:mx-auto"
+        >
+          {secondRow.map((service, i) => (
             <ServiceCard key={i} service={service} />
           ))}
         </motion.div>
@@ -141,7 +152,6 @@ export default function ServicesOverview() {
             </button>
           </Link>
         </motion.div>
-
       </div>
     </section>
   );
@@ -150,8 +160,10 @@ export default function ServicesOverview() {
 function ServiceCard({ service }: { service: (typeof services)[0] }) {
   return (
     <motion.div variants={fadeUp}>
-      <Link href={service.href} className="group block bg-white overflow-hidden">
-
+      <Link
+        href={service.href}
+        className="group block bg-white overflow-hidden"
+      >
         {/* Image */}
         <div className="relative h-60 overflow-hidden">
           <motion.div
