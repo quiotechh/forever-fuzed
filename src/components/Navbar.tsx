@@ -8,48 +8,31 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Menu, ChevronDown } from "lucide-react";
 
 const services = [
-  { emoji: "🎁", label: "Luxury Wedding Hampers", href: "/services#hampers" },
   {
-    emoji: "✈️",
-    label: "Guest Logistics & Hospitality",
-    href: "/services#logistics",
+    emoji: "🌸",
+    label: "Wedding Styling & Design",
+    href: "/services/wedding-styling",
+  },
+  {
+    emoji: "🎁",
+    label: "Luxury Gifting & Wedding Hampers",
+    href: "/services/luxury-gifting",
   },
   {
     emoji: "🎭",
-    label: "Entertainment Curation",
-    href: "/services#entertainment",
-  },
-  { emoji: "🌸", label: "Decor & Experience Design", href: "/services#decor" },
-  {
-    emoji: "🍽️",
-    label: "Catering & Culinary Experience",
-    href: "/services#catering",
-  },
-  { emoji: "👗", label: "Wardrobe & Styling", href: "/services#wardrobe" },
-  { emoji: "💄", label: "Personal Styling & Beauty", href: "/services#beauty" },
-  {
-    emoji: "📸",
-    label: "Photography & Videography",
-    href: "/services#photography",
+    label: "Curated Entertainment Experiences",
+    href: "/services/entertainment",
   },
   {
-    emoji: "🎬",
-    label: "Pre-Wedding Productions",
-    href: "/services#prewedding",
-  },
-  { emoji: "💃", label: "Dance & Choreography", href: "/services#dance" },
-  { emoji: "🎨", label: "Mehendi Storytelling", href: "/services#mehendi" },
-  {
-    emoji: "💌",
-    label: "Invitations & Guest Comms",
-    href: "/services#invitations",
+    emoji: "✈️",
+    label: "Seamless Event Logistics & Guest Management",
+    href: "/services/event-logistics",
   },
   {
-    emoji: "💍",
-    label: "Surprise Proposal Planning",
-    href: "/services#proposals",
+    emoji: "💎",
+    label: "Premium Vendor Curation & Management",
+    href: "/services/vendor-curation",
   },
-  { emoji: "💎", label: "Bespoke Experiences", href: "/services#bespoke" },
 ];
 
 const navLinks = [
