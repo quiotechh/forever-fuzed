@@ -886,7 +886,7 @@ function ClosingStrip() {
           className="flex flex-wrap items-center justify-center gap-10 md:gap-16 mb-16"
         >
           {[
-            { val: "30+", label: "Celebrations Curated" },
+            { val: "50+", label: "Celebrations Curated" },
             { val: "10+", label: "Years Experience" },
             { val: "100%", label: "Client Satisfaction" },
           ].map(({ val, label }) => (
