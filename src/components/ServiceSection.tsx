@@ -13,7 +13,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
     accent: "#9CA195",
-    href: "/services#styling",
+    href: "/services/wedding-styling",
   },
   {
     number: "02",
@@ -23,7 +23,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
     accent: "#F2A7B0",
-    href: "/services#gifting",
+    href: "/services/luxury-gifting",
   },
   {
     number: "03",
@@ -33,7 +33,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80",
     accent: "#C9A96E",
-    href: "/services#entertainment",
+    href: "/services/entertainment",
   },
   {
     number: "04",
@@ -43,7 +43,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
     accent: "#9CA195",
-    href: "/services#logistics",
+    href: "/services/event-logistics",
   },
   {
     number: "05",
@@ -53,7 +53,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
     accent: "#F2A7B0",
-    href: "/services#vendors",
+    href: "/services/vendor-curation",
   },
 ];
 
