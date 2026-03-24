@@ -29,9 +29,8 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-[#1a1f1a] text-white">
-
       {/* Top ribbon */}
-      <div className="h-[3px] bg-gradient-to-r from-[#C9A96E] via-[#F2A7B0] to-[#9CA195]" />
+      <div className="h-0.75 bg-linear-to-r from-[#C9A96E] via-[#F2A7B0] to-[#9CA195]" />
 
       {/* Logo + tagline */}
       <div className="flex flex-col items-center text-center pt-16 pb-12 px-6 border-b border-white/8">
@@ -233,7 +232,6 @@ export default function Footer() {
           Quiotech
         </Link>
       </div>
-
     </footer>
   );
 }

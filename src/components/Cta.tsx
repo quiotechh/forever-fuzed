@@ -1,32 +1,22 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-const COLORS = ["#C9A96E", "#F2A7B0", "#9CA195", "#ffffff"];
-
-function generateParticles() {
-  return Array.from({ length: 40 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 3 + 1,
-    duration: Math.random() * 4 + 3,
-    delay: Math.random() * 5,
-    color: COLORS[Math.floor(Math.random() * 4)],
-    opacity: Math.random() * 0.6 + 0.2,
-  }));
-}
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 export default function CTABanner() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [hovering, setHovering] = useState(false);
-  const [particles, setParticles] = useState<ReturnType<typeof generateParticles>>([]);
+  const [particlesReady, setParticlesReady] = useState(false);
 
+  // Initialize tsParticles engine once on client
   useEffect(() => {
-    setParticles(generateParticles());
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setParticlesReady(true));
   }, []);
 
   const mouseX = useMotionValue(0);
@@ -83,33 +73,47 @@ export default function CTABanner() {
         <div className="absolute inset-0 bg-[#3D4F3C]/40" />
       </div>
 
-      {/* Glitter particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
-        {particles.map((p) => (
-          <motion.div
-            key={p.id}
-            className="absolute rounded-full"
-            style={{
-              left: `${p.x}%`,
-              top: `${p.y}%`,
-              width: p.size,
-              height: p.size,
-              backgroundColor: p.color,
-            }}
-            animate={{
-              y: [0, -60, -120],
-              opacity: [0, p.opacity, 0],
-              scale: [0, 1.5, 0],
-            }}
-            transition={{
-              duration: p.duration,
-              delay: p.delay,
-              repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
-        ))}
-      </div>
+      {/* tsParticles glitter */}
+      {particlesReady && (
+        <Particles
+          className="absolute inset-0 z-10 pointer-events-none"
+          options={{
+            fullScreen: { enable: false },
+            fpsLimit: 60,
+            particles: {
+              number: {
+                value: 40,
+              },
+              color: {
+                value: ["#C9A96E", "#F2A7B0", "#9CA195", "#ffffff"],
+              },
+              shape: {
+                type: "circle",
+              },
+              opacity: {
+                value: { min: 0.2, max: 0.8 },
+                animation: {
+                  enable: true,
+                  speed: 0.8,
+                  sync: false,
+                },
+              },
+              size: {
+                value: { min: 1, max: 4 },
+              },
+              move: {
+                enable: true,
+                direction: "top",
+                speed: { min: 0.5, max: 2 },
+                straight: false,
+                outModes: { default: "out" },
+                random: true,
+              },
+            },
+            detectRetina: true,
+          }}
+        />
+      )}
 
       {/* Shimmer sweep overlay */}
       <motion.div
@@ -142,7 +146,7 @@ export default function CTABanner() {
           <div className="h-px w-12 bg-[#C9A96E]" />
         </motion.div>
 
-        {/* Heading — deepest parallax layer */}
+        {/* Heading */}
         <motion.h2
           style={{ x: headingX, y: headingY, translateZ: "40px" }}
           initial={{ opacity: 0, y: 30 }}
@@ -156,7 +160,7 @@ export default function CTABanner() {
           <span className="italic text-[#F2A7B0]">A Perfect Beginning</span>
         </motion.h2>
 
-        {/* Subtext — mid parallax layer */}
+        {/* Subtext */}
         <motion.p
           style={{ x: subX, y: subY, translateZ: "20px" }}
           initial={{ opacity: 0, y: 20 }}
@@ -181,9 +185,7 @@ export default function CTABanner() {
           {/* Primary with shimmer */}
           <Link href="/contact">
             <button className="relative overflow-hidden group font-lato text-[11px] tracking-[0.28em] uppercase px-10 py-4 bg-[#C9A96E] text-white transition-all duration-300 hover:shadow-xl hover:shadow-[#C9A96E]/40">
-              {/* Base hover fill */}
               <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-              {/* Shimmer sweep */}
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/25 to-transparent skew-x-12" />
               <span className="relative">Begin Your Journey</span>
             </button>
