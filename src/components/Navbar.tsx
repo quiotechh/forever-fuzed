@@ -35,14 +35,6 @@ const services = [
   },
 ];
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Feature Media", href: "/media" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact Us", href: "/contact" },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -168,6 +160,7 @@ export default function Navbar() {
 
             <SheetContent
               side="right"
+              aria-describedby={undefined}
               className="w-75 bg-[#faf9f7] border-l border-[#e8ddd5] p-0 overflow-y-auto"
             >
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
