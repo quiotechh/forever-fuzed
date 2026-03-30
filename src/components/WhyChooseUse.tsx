@@ -89,7 +89,7 @@ export default function WhyChooseUs() {
               {/* Large faded number */}
               <p
                 className="font-cormorant text-[96px] md:text-[140px] font-light leading-none mb-2 select-none"
-                style={{ color: `${reason.accent}20` }}
+                style={{ color: `${reason.accent}75` }}
               >
                 {reason.number}
               </p>
