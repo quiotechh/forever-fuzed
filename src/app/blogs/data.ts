@@ -13,8 +13,8 @@ export type BlogPost = {
   heroImage: string;
   cardImage: string;
   category: string;
-  paragraphs: string[];      // Used for narrative blogs (no section headings)
-  sections?: BlogSection[];  // Used for case-study / story blogs with section headings
+  paragraphs: string[]; // Used for narrative blogs (no section headings)
+  sections?: BlogSection[]; // Used for case-study / story blogs with section headings
   nextSlug: string;
   nextTitle: string;
 };
@@ -29,10 +29,8 @@ export const blogs: BlogPost[] = [
     excerpt:
       "From Toronto to Jaipur \u2014 a love story that crossed continents, navigated real-life challenges, and unfolded into a five-day palace celebration unlike any other.",
     accent: "#C9A96E",
-    heroImage:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80",
-    cardImage:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80",
+    heroImage: "/DEEP9472.JPG",
+    cardImage: "/DEEP9476.JPG",
     category: "Real Wedding",
     paragraphs: [], // content lives in sections below
     sections: [
@@ -134,10 +132,8 @@ export const blogs: BlogPost[] = [
     excerpt:
       "A wedding is not a single day. It is a journey \u2014 one that begins with a \u201cyes\u201d and unfolds into a lifetime of memories.",
     accent: "#F2A7B0",
-    heroImage:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80",
-    cardImage:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80",
+    heroImage: "/009A2350.jpg",
+    cardImage: "/DEEP7060.jpg",
     category: "Wedding Philosophy",
     paragraphs: [
       "A wedding is not a single day. It is a journey \u2014 one that begins with a \u201cyes\u201d and unfolds into a lifetime of memories.",
@@ -161,10 +157,8 @@ export const blogs: BlogPost[] = [
     excerpt:
       "A truly unforgettable wedding is not defined by how grand it is, but by how personal it feels.",
     accent: "#9CA195",
-    heroImage:
-      "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&q=80",
-    cardImage:
-      "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=900&q=80",
+    heroImage: "/DEEP7050.jpg",
+    cardImage: "/DEEP7056.jpg",
     category: "Storytelling",
     paragraphs: [
       "In a world of Pinterest boards and Instagram trends, weddings are starting to look beautiful \u2014 but increasingly similar.",
@@ -190,10 +184,8 @@ export const blogs: BlogPost[] = [
     excerpt:
       "Luxury weddings may look effortless \u2014 but behind every seamless celebration lies months of meticulous planning, coordination, and precision.",
     accent: "#C9A96E",
-    heroImage:
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80",
-    cardImage:
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80",
+    heroImage: "/DEEP7495.jpg",
+    cardImage: "/DEEP7492.JPG",
     category: "Our Process",
     paragraphs: [
       "Luxury weddings may look effortless \u2014 but behind every seamless celebration lies months of meticulous planning, coordination, and precision.",
@@ -218,10 +210,8 @@ export const blogs: BlogPost[] = [
     excerpt:
       "No two love stories are the same \u2014 and no two weddings should be either. True luxury lies in originality, not repetition.",
     accent: "#F2A7B0",
-    heroImage:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&q=80",
-    cardImage:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900&q=80",
+    heroImage: "/DEEP9490.JPG",
+    cardImage: "/DEEP8535.JPG",
     category: "Our Approach",
     paragraphs: [
       "No two love stories are the same \u2014 and at Forever Fuzed, no two weddings should be either.",

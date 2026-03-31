@@ -22,7 +22,7 @@ export default function ServicesPage() {
       <section className="relative h-[75vh] min-h-130 flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80"
+            src="/DEEP9441.jpg"
             alt="Our Services"
             fill
             className="object-cover object-center"
@@ -57,8 +57,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8, delay: 0.35 }}
             className="font-cormorant text-white font-light leading-[1.06] text-5xl sm:text-6xl md:text-7xl lg:text-[80px] max-w-3xl"
           >
-            Our{" "}
-            <span className="italic text-[#F2A7B0]">Services</span>
+            Our <span className="italic text-[#F2A7B0]">Services</span>
           </motion.h1>
 
           <motion.p
@@ -88,8 +87,12 @@ export default function ServicesPage() {
             <div className="h-px w-10 bg-[#C9A96E]" />
           </div>
           <p className="font-cormorant text-[#3a2e2a] font-light text-2xl md:text-3xl leading-snug">
-            We offer a curated suite of luxury services — each designed to transform your celebration into an{" "}
-            <span className="italic text-[#9CA195]">unforgettable experience</span>.
+            We offer a curated suite of luxury services — each designed to
+            transform your celebration into an{" "}
+            <span className="italic text-[#9CA195]">
+              unforgettable experience
+            </span>
+            .
           </p>
         </motion.div>
       </section>
@@ -99,9 +102,11 @@ export default function ServicesPage() {
         {services.map((service, i) => {
           const isEven = i % 2 === 0;
           return (
-            <div key={service.slug} className="border-b border-[#ede6df] last:border-b-0">
+            <div
+              key={service.slug}
+              className="border-b border-[#ede6df] last:border-b-0"
+            >
               <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-
                 {/* Image */}
                 <motion.div
                   variants={fadeUp}
@@ -109,7 +114,7 @@ export default function ServicesPage() {
                   whileInView="show"
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.8 }}
-                  className={`relative h-80 md:h-[480px] overflow-hidden ${isEven ? "lg:order-1" : "lg:order-2"}`}
+                  className={`relative h-80 md:h-120 overflow-hidden ${isEven ? "lg:order-1" : "lg:order-2"}`}
                 >
                   <Image
                     src={service.overviewImage}
@@ -140,7 +145,10 @@ export default function ServicesPage() {
                 >
                   {/* Eyebrow */}
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="h-px w-8" style={{ backgroundColor: service.accent }} />
+                    <div
+                      className="h-px w-8"
+                      style={{ backgroundColor: service.accent }}
+                    />
                     <span
                       className="font-lato text-[9px] tracking-[0.35em] uppercase"
                       style={{ color: service.accent }}
@@ -179,7 +187,10 @@ export default function ServicesPage() {
                   <Link href={`/services/${service.slug}`}>
                     <button
                       className="relative overflow-hidden group font-lato text-[10.5px] tracking-[0.3em] uppercase px-8 py-3.5 border transition-all duration-300 w-fit"
-                      style={{ borderColor: service.accent, color: service.accent }}
+                      style={{
+                        borderColor: service.accent,
+                        color: service.accent,
+                      }}
                     >
                       <span
                         className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"
@@ -201,7 +212,7 @@ export default function ServicesPage() {
       <section className="relative py-28 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80"
+            src="/DEEP9452.jpg"
             alt=""
             fill
             className="object-cover object-center"
@@ -237,7 +248,8 @@ export default function ServicesPage() {
           </h2>
 
           <p className="font-lato text-white/60 text-sm leading-relaxed mb-10 max-w-md mx-auto">
-            Let&apos;s create something extraordinary together. Every celebration deserves to be unforgettable.
+            Let&apos;s create something extraordinary together. Every
+            celebration deserves to be unforgettable.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

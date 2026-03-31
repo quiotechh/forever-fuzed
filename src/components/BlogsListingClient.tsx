@@ -28,7 +28,7 @@ export default function BlogsListingClient() {
       <section className="relative w-full h-screen min-h-150 overflow-hidden">
         {/* Background image */}
         <Image
-          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920&q=80"
+          src="/DEEP9454.jpg"
           alt="The Journal — Forever Fuzed"
           fill
           className="object-cover object-center"
@@ -94,7 +94,8 @@ export default function BlogsListingClient() {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="font-cormorant italic text-[#3a2e2a] text-xl sm:text-2xl font-light leading-[1.6]">
-            Perspectives on love, design, and the art of crafting unforgettable celebrations.
+            Perspectives on love, design, and the art of crafting unforgettable
+            celebrations.
           </p>
         </motion.div>
       </section>
