@@ -23,7 +23,7 @@ function AboutHero() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80"
+          src="/DEEP9447.jpg"
           alt=""
           fill
           className="object-cover object-center"
@@ -685,7 +685,7 @@ function AboutCTA() {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1920&q=80"
+          src="/DEEP7495.jpg"
           alt=""
           fill
           className="object-cover object-center"

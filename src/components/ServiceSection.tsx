@@ -11,7 +11,7 @@ const services = [
     description:
       "From concept to execution, every element—color palettes, décor, floral artistry, tablescapes, and ambiance—is thoughtfully curated to create a seamless and luxurious setting. Blending modern elegance with timeless traditions.",
     image:
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
+      "/DEEP8527.jpg",
     accent: "#9CA195",
     href: "/services/wedding-styling",
   },
@@ -21,7 +21,7 @@ const services = [
     description:
       "Bespoke gifting experiences that leave a lasting impression. From curated welcome hampers to elegant wedding favors, each piece is tailored to your theme with premium packaging and personalized details.",
     image:
-      "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
+      "/009A2365.jpg",
     accent: "#F2A7B0",
     href: "/services/luxury-gifting",
   },
@@ -31,7 +31,7 @@ const services = [
     description:
       "From live performers and celebrity artists to immersive cultural acts and high-energy productions, we design moments that elevate every event. Each experience is tailored to your audience.",
     image:
-      "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80",
+      "/DEEP7482.jpg",
     accent: "#C9A96E",
     href: "/services/entertainment",
   },
@@ -41,7 +41,7 @@ const services = [
     description:
       "We manage all logistical elements—from guest coordination and transportation to timelines and on-ground execution—ensuring everything flows effortlessly so you enjoy every moment without concern.",
     image:
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
+      "/009A2094.jpg",
     accent: "#9CA195",
     href: "/services/event-logistics",
   },
@@ -51,7 +51,7 @@ const services = [
     description:
       "A trusted network of top-tier vendors across India and Canada. From venues and décor to catering and production, every partner is carefully selected. We handle sourcing, negotiation, and coordination.",
     image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+      "/DEEP7050.jpg",
     accent: "#F2A7B0",
     href: "/services/vendor-curation",
   },

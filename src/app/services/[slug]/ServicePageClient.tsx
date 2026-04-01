@@ -371,7 +371,7 @@ export default function ServicePageClient({ slug }: { slug: string }) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="relative w-full max-w-3xl aspect-[4/3] mx-12 md:mx-20"
+                className="relative w-full max-w-3xl aspect-4/3 mx-12 md:mx-20"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Image

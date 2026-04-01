@@ -8,32 +8,32 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const portraitImages = [
   {
-    src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80",
+    src: "/009A0514.jpg",
     alt: "Wedding ceremony",
     category: "Ceremony",
   },
   {
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
+    src: "/009A2081.jpg",
     alt: "Bridal portrait",
     category: "Portraits",
   },
   {
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80",
+    src: "/009A2087.jpg",
     alt: "Wedding decor",
     category: "Decor",
   },
   {
-    src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&q=80",
+    src: "/DEEP7466.jpg",
     alt: "Reception",
     category: "Reception",
   },
   {
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80",
+    src: "/DEEP8527.jpg",
     alt: "Floral design",
     category: "Florals",
   },
   {
-    src: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80",
+    src: "/DEEP7480.jpg",
     alt: "Couple portrait",
     category: "Portraits",
   },
@@ -41,32 +41,32 @@ const portraitImages = [
 
 const squareImages = [
   {
-    src: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80",
+    src: "/DEEP7060.jpg",
     alt: "Wedding details",
     category: "Details",
   },
   {
-    src: "https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=600&q=80",
+    src: "/009A0509.jpg",
     alt: "Celebration",
     category: "Celebration",
   },
   {
-    src: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=600&q=80",
+    src: "/DEEP7490.jpg",
     alt: "Entertainment",
     category: "Entertainment",
   },
   {
-    src: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
+    src: "/009A2341.jpg",
     alt: "Hampers",
     category: "Gifting",
   },
   {
-    src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80",
+    src: "/DEEP9489.jpg",
     alt: "Venue",
     category: "Venue",
   },
   {
-    src: "https://images.unsplash.com/photo-1519657337289-077653f724ed?w=600&q=80",
+    src: "/DEEP9495.jpg",
     alt: "Styling",
     category: "Styling",
   },
