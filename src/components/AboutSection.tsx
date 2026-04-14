@@ -27,7 +27,7 @@ export default function FounderTeaser() {
           {/* Photo */}
           <div className="relative aspect-3/4 rounded-4xl w-full max-w-md mx-auto lg:mx-0 overflow-hidden">
             <Image
-              src="/founder.jpg"
+              src="/founder.JPG"
               alt="Surbhi Singh — Founder of Forever Fuzed"
               fill
               sizes="(max-width: 768px) 90vw, 400px"

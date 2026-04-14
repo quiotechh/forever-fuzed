@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Facebook, Youtube, Mail, Phone, Clock, MapPin } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Youtube,
+  Mail,
+  Phone,
+  Clock,
+  MapPin,
+} from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -12,18 +20,40 @@ const quickLinks = [
 ];
 
 const services = [
-  { label: "Decor & Experience Design", href: "/services#decor" },
-  { label: "Photography & Videography", href: "/services#photography" },
-  { label: "Guest Logistics", href: "/services#logistics" },
-  { label: "Entertainment Curation", href: "/services#entertainment" },
-  { label: "Wardrobe & Styling", href: "/services#wardrobe" },
-  { label: "Surprise Proposals", href: "/services#proposals" },
+  {
+    label: "Wedding Styling & Design",
+    href: "/services/wedding-styling",
+  },
+  {
+    label: "Luxury Gifting & Wedding Hampers",
+    href: "/services/luxury-gifting",
+  },
+  {
+    label: "Curated Entertainment Experiences",
+    href: "/services/entertainment",
+  },
+  {
+    label: "Seamless Event Logistics & Guest Management",
+    href: "/services/event-logistics",
+  },
+  {
+    label: "Premium Vendor Curation & Management",
+    href: "/services/vendor-curation",
+  },
 ];
 
 const socials = [
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-  { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/foreverfuzedweddings?igsh=MWppN2dzZTdtdDhjYg==",
+    label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/share/17JcFJkwK1/?mibextid=wwXIfr",
+    label: "Facebook",
+  },
+  // { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
 ];
 
 export default function Footer() {
@@ -57,7 +87,6 @@ export default function Footer() {
 
       {/* Main grid */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-
         {/* Quick Links */}
         <div>
           <h4 className="font-lato text-[10px] tracking-[0.3em] uppercase text-[#C9A96E] mb-6">
@@ -122,7 +151,7 @@ export default function Footer() {
                 href="mailto:hello@foreverfuzed.com"
                 className="font-lato text-sm text-white/55 hover:text-[#F2A7B0] transition-colors"
               >
-                hello@foreverfuzed.com
+                Foreverfusedevents@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-3">
@@ -139,7 +168,8 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <MapPin className="w-3.5 h-3.5 text-[#C9A96E] mt-0.5 shrink-0" />
               <span className="font-lato text-sm text-white/55 leading-relaxed">
-                Suite-56, 6733 Mississauga Road,<br />
+                Suite-56, 6733 Mississauga Road,
+                <br />
                 Mississauga, Ontario, L5N 6J5
               </span>
             </li>

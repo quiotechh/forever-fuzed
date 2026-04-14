@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -14,18 +15,15 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-screen min-h-150 overflow-hidden">
-      {/* ── Video ── */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        onCanPlay={() => setLoaded(true)}
-        poster="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80"
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* ── Hero Image with Zoom Animation ── */}
+      <Image
+        src="/hero-section.JPG"
+        alt="Hero Section"
+        fill
+        priority
+        onLoad={() => setLoaded(true)}
+        className="w-full h-full object-cover animate-zoom-inout"
+      />
 
       {/* ── Overlays ── */}
       <div className="absolute inset-0 bg-black/45" />

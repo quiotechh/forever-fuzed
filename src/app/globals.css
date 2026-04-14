@@ -134,3 +134,21 @@
     @apply font-sans;
   }
 }
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-zoom-inout {
+    animation: zoomInOut 8s ease-in-out infinite;
+  }
+}
