@@ -114,9 +114,9 @@ const infoCards = [
   {
     icon: Mail,
     label: "Email Us",
-    primary: "hello@foreverfuzed.com",
+    primary: "Foreverfusedevents@gmail.com",
     secondary: "We reply within 24 hrs",
-    href: "mailto:hello@foreverfuzed.com",
+    href: "mailto:Foreverfusedevents@gmail.com",
     accent: rose,
   },
   {
@@ -563,10 +563,10 @@ function FormSection() {
                     Email
                   </p>
                   <a
-                    href="mailto:hello@foreverfuzed.com"
+                    href="mailto:Foreverfusedevents@gmail.com"
                     className="font-cormorant text-[#3a2e2a] text-xl font-light hover:text-[#C9A96E] transition-colors break-all"
                   >
-                    hello@foreverfuzed.com
+                    Foreverfusedevents@gmail.com
                   </a>
                 </div>
               </li>
@@ -619,19 +619,19 @@ function FormSection() {
               {[
                 {
                   Icon: Instagram,
-                  href: "https://instagram.com",
+                  href: "https://www.instagram.com/foreverfuzedweddings?igsh=MWppN2dzZTdtdDhjYg==",
                   label: "Instagram",
                 },
                 {
                   Icon: Facebook,
-                  href: "https://facebook.com",
+                  href: "https://www.facebook.com/share/17JcFJkwK1/?mibextid=wwXIfr",
                   label: "Facebook",
                 },
-                {
-                  Icon: Youtube,
-                  href: "https://youtube.com",
-                  label: "YouTube",
-                },
+                // {
+                //   Icon: Youtube,
+                //   href: "https://youtube.com",
+                //   label: "YouTube",
+                // },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -652,7 +652,7 @@ function FormSection() {
           </div>
 
           {/* WhatsApp quick connect */}
-          <a
+          <Link
             href="https://wa.me/16479019915"
             target="_blank"
             rel="noopener noreferrer"
@@ -672,7 +672,7 @@ function FormSection() {
                 Chat on WhatsApp
               </span>
             </span>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

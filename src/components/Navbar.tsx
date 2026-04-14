@@ -133,9 +133,9 @@ export default function Navbar() {
             <NavLink href="/blogs" scrolled={scrolled}>
               Blogs
             </NavLink>
-            <NavLink href="/media" scrolled={scrolled}>
+            {/* <NavLink href="/media" scrolled={scrolled}>
               Feature Media
-            </NavLink>
+            </NavLink> */}
             <NavLink href="/gallery" scrolled={scrolled}>
               Gallery
             </NavLink>
@@ -236,12 +236,12 @@ export default function Navbar() {
                 >
                   Blogs
                 </MobileNavLink>
-                <MobileNavLink
+                {/* <MobileNavLink
                   href="/media"
                   onClose={() => setMobileOpen(false)}
                 >
                   Feature Media
-                </MobileNavLink>
+                </MobileNavLink> */}  
                 <MobileNavLink
                   href="/gallery"
                   onClose={() => setMobileOpen(false)}
