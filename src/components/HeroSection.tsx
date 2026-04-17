@@ -15,14 +15,27 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-screen min-h-150 overflow-hidden">
-      {/* ── Hero Image with Zoom Animation ── */}
+      {/* ── Hero Images (Desktop & Mobile) ── */}
+      {/* Desktop Image */}
       <Image
         src="/hero-section.JPG"
         alt="Hero Section"
         fill
         priority
+        sizes="100vw"
         onLoad={() => setLoaded(true)}
-        className="w-full h-full object-cover animate-zoom-inout"
+        className="hidden md:block w-full h-full object-cover animate-zoom-inout"
+      />
+
+      {/* Mobile Image */}
+      <Image
+        src="/hero-section-mobile.png"
+        alt="Hero Section Mobile"
+        fill
+        priority
+        sizes="100vw"
+        onLoad={() => setLoaded(true)}
+        className="block md:hidden w-full h-full object-cover animate-zoom-inout"
       />
 
       {/* ── Overlays ── */}

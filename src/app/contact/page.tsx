@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -11,7 +11,6 @@ import {
   MapPin,
   Instagram,
   Facebook,
-  Youtube,
   Send,
   ChevronDown,
 } from "lucide-react";
@@ -293,11 +292,44 @@ function SelectField({
 
 function FormSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Functional integration to be added later
-    setSubmitted(true);
+    setError(null);
+    setSending(true);
+
+    const form = e.currentTarget;
+    const formData = Object.fromEntries(new FormData(form)) as Record<
+      string,
+      string
+    >;
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setError(result?.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (err) {
+      setError("Unable to send message right now. Please try again later.");
+      console.error(err);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -350,6 +382,11 @@ function FormSection() {
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-9">
+              {error ? (
+                <div className="rounded border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-800">
+                  {error}
+                </div>
+              ) : null}
               {/* Row 1 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-9">
                 <Field
@@ -495,14 +532,15 @@ function FormSection() {
               <div className="pt-4">
                 <button
                   type="submit"
+                  disabled={sending}
                   className="relative overflow-hidden group font-lato text-[11px] tracking-[0.28em] uppercase
                              px-12 py-4 bg-[#3a2e2a] text-white transition-all duration-300
-                             hover:shadow-xl hover:shadow-[#3a2e2a]/20 flex items-center gap-3"
+                             hover:shadow-xl hover:shadow-[#3a2e2a]/20 flex items-center gap-3 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <span className="absolute inset-0 bg-[#C9A96E] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
                   <span className="relative flex items-center gap-3">
-                    Send Enquiry
+                    {sending ? "Sending..." : "Send Enquiry"}
                     <Send className="w-3.5 h-3.5" />
                   </span>
                 </button>
